@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Yousif Jalil - Fab Lab </title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Yousif Jalil</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                                                <li class="nav-item"><a class="nav-link active" aria-current="page" href="About%20me.html">About me</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Assignments</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="Project%20Management.html">Project Management</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                              <li class="nav-item"><a class="nav-link" href="#">Final Project</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container">
+            <div class="text-center mt-5">
+                <h1>Electronic Production</h1>
+            <br><br>
+                <p > This week I learned about the basic electronic boards production and how to make your circuit board. The goal was to make Fab ISP from by using a milled pcb with the Roland SRM-20 Machine, the design was from <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html" >Fab Tiny Star.</a> 
+So the first is we have to download 2 files or Pictures, the Traces which is the path that electricity moves in the circuit and second the Outline which is outside boarder that is need to cut pcb boarders so we can take it out. We are going to be using two drill bits one is 1/64 in and the other 1/32, so we must be careful with them especially the 1/64 is very fragile.
+                            <br></p>
+                
+                
+                <img src="assets/img/32.jpg" width ="500" height="500" ><br><br><br>
+                <img src="assets/img/64.jpg" width ="500" height="500"><br><br><br>
+                <img src="assets/img/trace.png" width ="500" height="150"><br><br><br>
+                <img src="assets/img/outline.png" width ="500" height="150">
+                
+                
+             
+                <p >
+               <br><br><br>
+                    So the next step is to transfer those files to Fab Modules which is a web-based tool used to transfer these images into coordinates that the machine can understand. After that you can save output files from the webtool into a usb and plug it in the Roland SRM-20 Machine.</p>
+                <p>1.	Input format -> Image(png) </p>
+                <img src="assets/img/input_img.JPG" width ="500" height="500" ><br><br>
+                
+                <p>2.	Output format -> Roland Mill(.rml) </p>
+                <img src="assets/img/roland_mill.JPG" width ="800" height="500" ><br><br>
+                
+                <p>3.	Process -> PCB traces (1/64) </p>
+                <img src="assets/img/roland_traces.JPG" width ="600" height="300" ><br><br>
+                
+                <p>4.	Make sure to put machine to SRM-20 and set x0,y0,z0 all to zero as that is important to set machine axis as an origin point which will be modified later. </p>
+                <img src="assets/img/roland_traces_settings.JPG" width ="500" height="500" ><br><br>
+                
+                <p>5.	Hit calculate and wait for the web-tool to finish and then save the files </p>
+                <img src="assets/img/roland_calculate.JPG" width ="800" height="300" ><br><br>
+                
+                <p>6.	Next is the same but for the other image the outside border. Input format -> Image(png) </p>
+                <img src="assets/img/input_img.JPG" width ="500" height="500" ><br><br>
+                
+                <p>7.	Output format -> Roland Mill(.rml) </p>
+                <img src="assets/img/roland_mill2.JPG" width ="800" height="400" ><br><br>
+                
+                <p>8.	Process -> PCB outline </p>
+                <img src="assets/img/roland_outline.JPG" width ="800" height="400" ><br><br>
+                
+                <p>9.	Also the same step for the second cut, make sure to put machine to SRM-20 and set x0,y0,z0 all to zero. </p>
+                <img src="assets/img/roland_outline_settings.JPG" width ="500" height="500" ><br><br>
+                
+                 <p>10.	Hit calculate and wait for the web-tool to finish and then save the files </p>
+                <img src="assets/img/roland_calculate2.JPG" width ="800" height="300" ><br><br>
+                
+              
+                    
+                     
+<p >
+                   Next Part is that we had to go to the machine and start it. Before we start drilling there is some calibration needed.<br>
+1.	Make sure the stock (copper piece) is tightened to platform<br> 
+2.	Choose enough material area for the part<br>
+3.	Put the drill bit on the spindle and tightened<br>
+4.	When you see that you have a good material area, Zero the X,Y-axis on the machine, this makes current point of the spindle is the new Origin<br>
+5.	 using the controls on the machine decrease the Z-axis until the bit almost touches the copper piece<br>
+6.	Unscrew the drill bit while pressing it down gently on the platform and the screw it back then Zero the Z-axis<br>
+7.	Return to origin for the X,Y and Z and start milling
+                                                                </p>
+                <p> Here is the Milling Process for the Traces</p>
+                <video width="500" height="500" controls>
+                    <source src= "assets/img/Trace.mp4" type="video/mp4"> </video>
+                
+                    <br><br><br>
+                
+                 <p> Milling process for the Outline</p>
+                <video width="500" height="500" controls>
+                    <source src= "assets/img/Outline.mp4" type="video/mp4"> </video>
+                
+                    <br><br><br>
+                <p> And here is the finished Product after Milling.</p>
+                <img src ="assets/img/ISP.jpg" width="300" height="500" >
+                 <br><br><br>
+                    <h1> Assembling ISP</h1>
+                
+                <p > <br> Now after I Finished the Milling its time gather the components and start Soldering, I have tried soldering before but not on this small scale so when I started soldering, I started with the Atiny45 chip which has 8 legs, the mistake I did was applied solder wire to all of the legs which wrong, so with the help of engineer Hashim, he helped me remove the chip by de-soldering using the hot gun and do it again. The second time I made sure to add Solder wire in small amounts to get used to it then continued with soldering other components. <br>
+                Getting the components:
+1.	1x ATtiny45<br>
+2.	2x 1kΩ resistors<br>
+3.	2x 499Ω resistors<br>
+4.	2x 49Ω resistors<br>
+5.	2x 3.3v zener diodes<br>
+6.	1x red LED<br>
+7.	1x green LED<br>
+8.	1x 100nF capacitor<br>
+9.	1x 2x3 pin header
+    </p>
+                <img src = "assets/img/Soldering%20Components.jpg" width="400" height="600">
+                
+                
+                
+                <p> <br> Soldering the components according to the schematics below, note that some components have to be soldered in a specific orientation, you can see on the schematic for example U1 has a dot in its left bottom corner, it indicates the direction, also the Zener diodes D1,D2 have lines on them to indicate their orientation, as well as LED’s you have to solder them regarding to where is the direction their grounded to, that can be checked by using the multimeter on continuity mode.  </p>
+                <img src="assets/img/pcb.schematic.png" width ="500" height="200" ><br><br>
+                
+                
+                
+                
+                <p>Here is the ISP after soldering the components </p>
+                <img src="assets/img/isp_after.jpg" width ="500" height="500" ><br><br>
+                
+                
+                
+                
+                
+                <p>The Final Part, which is programming the ISP board, but before starting programming there is an important step which is to check for short circuits tests using the multimeter on the Continuity mode </p>
+                <img src="assets/img/multimeter.jpg" width ="500" height="500" ><br><br>
+                
+                
+                
+                
+                
+                <p> <br> Now to start programming the ISP there are some files that need to be downloaded, also I followed <a href="https://fabacademy.org/2020/labs/uae/students/meha-hashmi/week4/electronics_production.html">Maha’s</a> great documentation on this, so here are the files that need to be downloaded 
+                                                </p>   
+               
+        
+                            <p style = "text-align: left" >
+                                1.	<a href="https://sourceforge.net/projects/winavr/" >WinAVR 20100110 </a> <br>
+
+                                2.	<a href="Zadig https://zadig.akeo.ie/">Zadig</a><br>
+
+                                3.	<a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/fts_firmware_bdm_v1.zip">FTS firmware</a>  <br>
+                                
+                                4.	Download <a href="http://download.savannah.gnu.org/releases/avrdude/" >AVRdude gnu files </a>Choose version 6.3.2016  <br>
+                                    <img src="assets/img/avr-gnu.JPG" width="600" height="150"style = "align-items: center" >
+                                    </p>
+                
+                
+                
+                            <p style = "text-align: left">
+ After downloading the files now its time to install the files.
+1.	Install WinAVR 20100110 <br>
+2.	Navigate to your WinAVR installed folder -> bin and delete these two files, avrdude.conf and avrdude. <br>
+3.	Replace the removed files from the downloaded AVRdude gnu files <br>
+4.	Go to  control panel > systems > advanced system settings > environmental variables > path > edit > delete the old AVR path(if found)or add the new path to the bin (../WinAvr/bin).<br>
+5.	Go to FTS firmware folder and open the git bash there and run these commands separately<br>
+6.	 “make -v”<br>
+7.	“Avr-gcc –version”<br>
+8.	avrdude -c usbtiny -p t45
+<br> </p>
+                
+                
+                 <p>“make -v"</p>
+                <img src = "assets/Electronic/avr-check1.jpg">
+                <br><br>
+                
+                
+                            <p>“avr-gcc –version” </p>
+                <img src ="assets/Electronic/avr-gcc.jpg" > <br><br>
+                            <p>8.	“avrdude -c usbtiny -p t45” </p> 
+                <img src="assets/Electronic/avr-dude.jpg">   <br> <br>
+                            <p>9.	connect a fully programmed ISP with your unprogrammed ISP together through a six-pin connector with wires. (note that its important for the wires to have some orientation when you connect the ISP’s together)   </p>
+                
+                <img src="assets/Electronic/two_connectors.jpg" width="500" height="300"> <br> <br>
+                
+                            <p>10.	Plug the Fully programmed ISP into your PC and Run Zadig</p>
+                
+                            <p>11.	In Zadig make sure that you can see the USBtinySPI and choose “libsub-win32 (v1.2.6.0)” and install the driver</p>
+                <img src="assets/Electronic/zadig.JPG"> <br> <br>
+                
+                
+                         <p>12.	Go back to git bash in the FTS Firmware directory and write “make” command </p>
+                <img src="assets/Electronic/make.JPG"> <br> <br>  
+                
+                
+                <p>13.	Run “make flash” command  </p>
+                <img src="assets/Electronic/make_flash.JPG"> <br> <br> 
+                
+                
+                
+                <p>14.	Run “make fuses”</p>
+                <img src="assets/Electronic/make_fuses.JPG"> <br> <br>
+                
+                <p>15.	Run “make rstdisbl”</p>
+                <img src="assets/Electronic/make_rstdisbl.JPG"> <br> <br> 
+                
+                
+                <p>16.	Last step is to check if your ISP(unprogrammed-previously) is working disconnect the ISP’s and plug your ISP into PC and Open device manager and you will see it, also try giving it to a colleague have them perform the same process to program their own to make sure it’s working successfully. </p>
+                <img src="assets/Electronic/device_manager.JPG" width="500" height="500"> <br> <br>
+                
+                
+                
+                       
+                
+                            <p>....</p>
+                
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
